@@ -1,10 +1,16 @@
+import Navigation from "./components/Navigation.jsx";
+import Hero from "./components/Hero.jsx";
+import Search from "./components/Search.jsx";
+import Gallery from "./components/Gallery.jsx";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-green-100">
-      <h1 className="text-5xl font-bold text-green-700">
-        TrailFinder 🌲
-      </h1>
+    <div className="min-h-screen">
+
+      <Navigation />
+      <Hero />
+      <Search />
+      <Gallery />
     </div>
   )
 }
