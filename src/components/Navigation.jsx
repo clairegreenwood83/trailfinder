@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -15,13 +16,13 @@ function Navigation() {
   return (
     <header className={`site-header ${hasScrolled ? "site-header--scrolled" : ""}`}>
       <nav className="site-nav" aria-label="Primary navigation">
-        <a className="wordmark" href="#top" aria-label="TrailFinder home">
+        <Link className="wordmark" to="/" aria-label="TrailFinder home">
           TrailFinder
-        </a>
+        </Link>
 
-        <a className="nav-link" href="#featured-trails">
+        <Link className="nav-link" to="/explore">
           Explore
-        </a>
+        </Link>
       </nav>
     </header>
   );

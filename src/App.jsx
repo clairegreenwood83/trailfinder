@@ -1,6 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation.jsx";
-import Hero from "./components/Hero.jsx";
-import Gallery from "./components/Gallery.jsx";
+import Home from "./pages/Home.jsx";
+import Explore from "./pages/Explore.jsx";
 
 function App() {
   return (
@@ -9,12 +10,12 @@ function App() {
         Skip to main content
       </a>
       <Navigation />
-      <main id="main-content">
-        <Hero />
-        <Gallery />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+      </Routes>
     </div>
   )
 }
 
-export default App
+export default App;
