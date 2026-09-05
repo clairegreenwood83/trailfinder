@@ -29,11 +29,9 @@ function TrailDetails() {
 
         <div className="trail-details__layout">
           <img src={trail.image} alt={trail.imageAlt} />
-
           <div className="trail-details__content">
             <p className="eyebrow eyebrow--light">{trail.region}</p>
             <h1>{trail.name}</h1>
-
             <dl className="trail-details__facts">
               <div>
                 <dt>Difficulty</dt>
@@ -43,7 +41,26 @@ function TrailDetails() {
                 <dt>Duration</dt>
                 <dd>{trail.duration}</dd>
               </div>
+              <div>
+                <dt>Distance</dt>
+                <dd>{trail.distance}</dd>
+              </div>
+              <div>
+                <dt>Elevation</dt>
+                <dd>{trail.elevation}</dd>
+              </div>
+              <div>
+                <dt>Start point</dt>
+                <dd>{trail.startPoint.name}</dd>
+              </div>
             </dl>
+          </div>
+          <div>
+          {trail.description && (
+            <section className="trail-details__description">
+              <p>{trail.description}</p>
+            </section>
+          )}
           </div>
         </div>
       </section>

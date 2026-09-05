@@ -522,7 +522,7 @@ a {
 .trail-details__layout {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
-  gap: clamp(2rem, 5vw, 5rem);
+  gap: 2rem clamp(2rem, 5vw, 5rem);
   align-items: center;
 }
 
@@ -562,6 +562,13 @@ a {
 .trail-details__facts dd {
   margin: 0;
   font-weight: 600;
+}
+
+.trail-details__subtitles {
+  display: flex;
+  padding-bottom: 2rem;
+  font-weight: 600;
+  gap: 2rem;
 }
 
 @media (max-width: 900px) {
