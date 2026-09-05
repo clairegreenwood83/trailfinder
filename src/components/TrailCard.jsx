@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 function TrailCard({ trail }) {
   return (
-    <article className="trail-card">
+    <Link className="trail-card" to={`/trails/${trail.id}`}>
       <img
         className="trail-card__image"
         src={trail.image}
@@ -23,7 +25,7 @@ function TrailCard({ trail }) {
           </div>
         </dl>
       </div>
-    </article>
+    </Link>
   );
 }
 

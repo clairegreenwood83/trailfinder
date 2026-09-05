@@ -20,9 +20,19 @@ function Navigation() {
           TrailFinder
         </Link>
 
-        <Link className="nav-link" to="/explore">
-          Explore
-        </Link>
+        <div className="site-nav__links">
+          <Link className="nav-link" to="/explore">
+            Explore
+          </Link>
+
+          <Link className="nav-link" to="/about">
+            About
+          </Link>
+
+          <Link className="nav-link" to="/contact">
+            Contact
+          </Link>
+        </div>
       </nav>
     </header>
   );

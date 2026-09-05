@@ -123,6 +123,12 @@ a {
   text-transform: uppercase;
 }
 
+.site-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .nav-link::after {
   position: absolute;
   right: 0;
@@ -321,6 +327,7 @@ a {
 
 .trail-card {
   position: relative;
+  display: block;
   min-height: clamp(30rem, 55vw, 42rem);
   overflow: hidden;
   border: 1px solid rgb(255 255 255 / 12%);
@@ -328,6 +335,8 @@ a {
   background: var(--forest-950);
   box-shadow: 0 1.5rem 4rem rgb(3 20 17 / 22%);
   isolation: isolate;
+  color: inherit;
+  text-decoration: none;
 }
 
 .trail-card__image,
@@ -502,6 +511,59 @@ a {
   text-align: center;
 }
 
+.trail-details.section-shell {
+  padding-block: 7rem 4rem;
+}
+
+.trail-details__back {
+  margin-bottom: 2rem;
+}
+
+.trail-details__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+
+.trail-details__layout > img {
+  width: 100%;
+  max-height: 42rem;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.trail-details h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.trail-details__facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgb(247 241 230 / 25%);
+}
+
+.trail-details__facts dt {
+  margin-bottom: 0.4rem;
+  color: rgb(247 241 230 / 65%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.trail-details__facts dd {
+  margin: 0;
+  font-weight: 600;
+}
+
 @media (max-width: 900px) {
   .featured-trails__heading {
     grid-template-columns: 1fr;
@@ -526,6 +588,10 @@ a {
 
   .trail-card {
     min-height: 35rem;
+  }
+
+  .trail-details__layout {
+    grid-template-columns: 1fr;
   }
 }
 

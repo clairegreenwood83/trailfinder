@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image3 from "../assets/images/gallery-3.png";
 
 function Hero() {
@@ -19,12 +20,12 @@ function Hero() {
         <p className="hero__intro">
           Discover hand-picked hikes across the UK, from gentle countryside walks to mountain days.
         </p>
-        <a className="button button--primary" href="#featured-trails">
+        <Link className="button button--primary" to="/explore">
           Explore trails
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
-        </a>
+        </Link>
       </div>
 
       <a className="hero__scroll-cue" href="#featured-trails">
