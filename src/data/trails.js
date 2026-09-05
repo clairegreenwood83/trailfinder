@@ -10,7 +10,11 @@ const trails = [
     difficulty: "Moderate",
     distance: "6.1km",
     duration: "2-2.5 hours",
-    description: "This trail takes in one of the most famous hills in Shropshire, with the route climbing up to and over the remains of a large Iron Age hill fort. Once inhabited by the Cornoviii tribe, the stronghold dates to 400 BC and has a commanding view over the surrounding area on a clear day. The well-trodden path to the top is stony and steep in few places, but the effort is well worth it. Great care is needed on the steep descent which can be muddy and slippery. Appropriate footwear is required. On a clear day, the views are very scenic and the wildlife is simply stunning. This area is a composite of volcanic rocks, very ancient in its origins. The car park at the trailhead requires a fee.",
+    description: [
+      "This trail takes in one of the most famous hills in Shropshire, with the route climbing up to and over the remains of a large Iron Age hill fort. Once inhabited by the Cornovii tribe, the stronghold dates to 400 BC and has a commanding view over the surrounding area on a clear day.",
+      "The well-trodden path to the top is stony and steep in a few places, but the effort is well worth it. Great care is needed on the steep descent, which can be muddy and slippery. Appropriate footwear is required.",
+      "On a clear day, the views are very scenic and the wildlife is simply stunning. This area is a composite of volcanic rocks, very ancient in its origins. The car park at the trailhead requires a fee.",
+    ],
     startPoint: {
       name: "Forest Glen Car Park",
       latitude: 52.679281,
@@ -28,7 +32,11 @@ const trails = [
     difficulty: "Challenging",
     distance: "5km",
     duration: "Around 4 hours",
-    description: "",
+    description: [
+      "This trail takes in one of the most famous hills in Shropshire, with the route climbing up to and over the remains of a large Iron Age hill fort. Once inhabited by the Cornovii tribe, the stronghold dates to 400 BC and has a commanding view over the surrounding area on a clear day.",
+      "The well-trodden path to the top is stony and steep in a few places, but the effort is well worth it. Great care is needed on the steep descent, which can be muddy and slippery. Appropriate footwear is required.",
+      "On a clear day, the views are very scenic and the wildlife is simply stunning. This area is a composite of volcanic rocks, very ancient in its origins. The car park at the trailhead requires a fee.",
+    ],
     startPoint: {
       name: "Forest Glen Car Park",
       latitude: 52.679281,
