@@ -27,7 +27,6 @@ function Gallery() {
         </ul>
 
         <div className="featured-trails__footer">
-          <p>More curated routes are coming with the full Explore experience.</p>
           <a className="text-link" href="#top">
             Back to top
             <svg viewBox="0 0 24 24" aria-hidden="true">
