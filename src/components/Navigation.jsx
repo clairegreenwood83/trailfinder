@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navigation() {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const updateNavigation = () => setHasScrolled(window.scrollY > 100);
+    const scrollThreshold = pathname === "/" ? 100 : 0;
+    const updateNavigation = () =>
+      setHasScrolled(window.scrollY > scrollThreshold);
 
     updateNavigation();
     window.addEventListener("scroll", updateNavigation, { passive: true });
 
     return () => window.removeEventListener("scroll", updateNavigation);
-  }, []);
+  }, [pathname]);
 
   return (
     <header className={`site-header ${hasScrolled ? "site-header--scrolled" : ""}`}>

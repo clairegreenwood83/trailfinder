@@ -5,11 +5,13 @@ import Explore from "./pages/Explore.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import TrailDetails from "./pages/TrailDetails.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 
 function App() {
   return (
     <div id="top" className="min-h-screen bg-[#173f35]">
+      <ScrollToTop />
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
