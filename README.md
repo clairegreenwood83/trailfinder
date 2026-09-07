@@ -1,16 +1,50 @@
-# React + Vite
+# TrailFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TrailFinder is a responsive React web application for discovering walking and hiking trails across the UK.
 
-Currently, two official plugins are available:
+I built the project to strengthen my React development skills and gain more experience building component-based, user-focused web applications.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Browse a selection of UK walking trails
+- Search trails by name, region or difficulty
+- View individual trail pages with distance, duration, difficulty and elevation information
+- Interactive maps showing trail starting points
+- Responsive design for different screen sizes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- React Router
+- Tailwind CSS
+- Leaflet / React Leaflet
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Running the project locally
+
+Clone the repository:
+
+git clone <repository-url>
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+## Future Improvements
+
+I plan to continue developing TrailFinder by adding features such as:
+
+- Additional trails and filtering options
+- Improved interactive map functionality
+- Elevation information and visualisations
+- User favourites
+- Data from external APIs
+
+## About
+
+TrailFinder is a personal portfolio project created to develop and demonstrate my frontend development skills, particularly with React.
