@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import trails from "../data/trails.js";
 
@@ -56,12 +56,16 @@ function TrailDetails() {
                 <dd>{trail.distance}</dd>
               </div>
               <div>
-                <dt>Elevation</dt>
-                <dd>{trail.elevation}</dd>
+                <dt>Elevation Gain</dt>
+                <dd>{trail.elevationGain}</dd>
               </div>
               <div>
                 <dt>Start point</dt>
                 <dd>{trail.startPoint.name}</dd>
+              </div>
+              <div>
+                <dt>Route Type</dt>
+                <dd>{trail.routeType}</dd>
               </div>
             </dl>
 
@@ -81,9 +85,10 @@ function TrailDetails() {
                 position={startPosition}
                 title={trail.startPoint.name}
                 alt={`${trail.startPoint.name} start point`}
-              >
+              >   
                 <Popup>{trail.startPoint.name}</Popup>
               </Marker>
+              {trail.route && <Polyline positions={trail.route} />}
             </MapContainer>
           </div>
 
