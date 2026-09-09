@@ -53,7 +53,7 @@ const trails = [
     id: "snowdon",
     name: "Snowdon",
     region: "Eryri, North Wales",
-    difficulty: "Challenging",
+    difficulty: "Hard",
     distance: "11km",
     duration: "Around 6 hours",
     description: [

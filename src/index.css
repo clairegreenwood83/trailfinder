@@ -503,6 +503,32 @@ a {
   border-color: var(--rust-light);
 }
 
+.filters {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.filters select {
+  min-width: 180px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--rust-light);
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+
 .explore__empty {
   padding: 3rem 1.5rem;
   border: 1px solid rgb(247 241 230 / 15%);
@@ -663,6 +689,18 @@ a {
   .featured-trails__footer {
     align-items: flex-start;
     padding-top: 3rem;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters {
+    gap: 0.25rem;
+  }
+
+  .filters select {
+    width: 100%;
   }
 }
 
