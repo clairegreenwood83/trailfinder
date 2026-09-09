@@ -2,10 +2,17 @@ import { Link, useParams } from "react-router-dom";
 import { MapContainer, Marker, Popup, TileLayer, Polyline } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import trails from "../data/trails.js";
+import { useEffect, useState } from "react";
+import clearIcon from "@meteocons/svg/fill/clear-day.svg";
+import cloudyIcon from "@meteocons/svg/fill/cloudy.svg";
+import partlyCloudyIcon from "@meteocons/svg/fill/partly-cloudy-day.svg";
+import thermometerIcon from "@meteocons/svg/fill/thermometer.svg";
+
 
 function TrailDetails() {
   const { trailId } = useParams();
   const trail = trails.find((item) => item.id === trailId);
+  const [weather, setWeather] = useState(null);
 
   if (!trail) {
     return (
@@ -26,6 +33,35 @@ function TrailDetails() {
     trail.startPoint.latitude,
     trail.startPoint.longitude,
   ];
+
+  useEffect(() => {
+    const latitude = trail.startPoint.latitude;
+    const longitude = trail.startPoint.longitude;
+
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setWeather(data.current));
+  }, [trail]);
+
+  function getWeatherIcon(weatherCode) {
+    if (weatherCode === 0) {
+      return clearIcon;
+    }
+
+    if (weatherCode === 1) {
+      return clearIcon;
+    }
+
+    if (weatherCode === 2) {
+      return partlyCloudyIcon;
+    }
+
+    if (weatherCode === 3) {
+      return cloudyIcon;
+    }
+  };
 
   return (
     <main id="main-content">
@@ -68,6 +104,21 @@ function TrailDetails() {
                 <dd>{trail.routeType}</dd>
               </div>
             </dl>
+
+            {weather && (
+              <div className="weather">
+                <div className="text-[var(--rust-light)]">Current weather</div>
+                <div className="weather-details">
+                  <div className="weather__temperature">
+                    <p>{weather.temperature_2m}°C</p>
+                  </div>
+                  <img className="weather_icon"
+                    src={getWeatherIcon(weather.weather_code)}
+                    alt={getWeatherIcon(weather.weather_code)} 
+                  />
+                </div>
+              </div>
+            )}
 
             <MapContainer
               key={trail.id}
