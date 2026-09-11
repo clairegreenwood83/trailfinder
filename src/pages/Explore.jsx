@@ -88,6 +88,18 @@ function Explore() {
               <option value="high">600+ m</option>
             </select>
           </label>
+          <button
+            className="filter-button" 
+            type="button"
+            onClick={() => {
+              setSearchTerm("");
+              setDifficulty("all");
+              setDistance("all");
+              setElevation("all");
+            }}
+          >
+            Clear filters
+          </button>
         </div>
 
         {filteredTrails.length > 0 ? (
@@ -100,7 +112,7 @@ function Explore() {
           </ul>
         ) : (
           <p className="explore__empty" role="status">
-            No trails found. Try a different search.
+            No trails found. Try changing your search or filters.
           </p>
         )}
       </section>

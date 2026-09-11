@@ -236,6 +236,14 @@ a {
   transition: background-color 180ms ease, transform 180ms ease;
 }
 
+.filter-button{
+  padding: 0.25rem 0.5rem;
+  background-color: #b95f40;
+  font-size: small;
+  font-weight: 500;
+  border-radius: 0.25rem
+}
+
 .button svg,
 .text-link svg,
 .hero__scroll-cue svg {
