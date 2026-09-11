@@ -41,8 +41,18 @@ function TrailDetails() {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,weather_code,wind_speed_10m`;
 
     fetch(url)
-      .then((response) => response.json())
-      .then((data) => setWeather(data.current));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Weather request failed");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setWeather(data.current);
+      })
+      .catch(error => {
+        console.error(error); 
+      })
   }, [trail]);
 
   function getWeatherIcon(weatherCode) {
