@@ -256,12 +256,12 @@ a {
 }
 
 .button--primary {
-  color: white;
-  background: var(--rust);
+  color: var(--cream);
+  background: #a95136;
 }
 
 .button--primary:hover {
-  background: #b95f40;
+  background: var(--rust);
   transform: translateY(-2px);
 }
 
