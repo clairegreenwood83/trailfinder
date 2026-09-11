@@ -4,7 +4,7 @@ TrailFinder is a responsive React web application for discovering walking and hi
 
 I built the project to strengthen my React development skills and gain more experience building component-based, user-focused web applications.
 
-[localhost_5173_.png.zip](https://github.com/user-attachments/files/32121435/localhost_5173_.png.zip)
+<img width="1352" height="884" alt="Screenshot 2026-09-11 at 17 45 45" src="https://github.com/user-attachments/assets/a3415b76-498c-43a9-a66c-cd7e1f0081eb" />
 
 ## Features
 
