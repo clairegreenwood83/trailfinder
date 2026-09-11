@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
+
 import image3 from "../assets/images/gallery-3.png";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (

@@ -3,7 +3,6 @@ import Navigation from "./components/Navigation.jsx";
 import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
 import About from "./pages/About.jsx";
-import Contact from "./pages/Contact.jsx";
 import TrailDetails from "./pages/TrailDetails.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 
@@ -21,7 +20,6 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/trails/:trailId" element={<TrailDetails />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   )

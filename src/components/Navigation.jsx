@@ -20,7 +20,8 @@ function Navigation() {
     <header className={`site-header ${hasScrolled ? "site-header--scrolled" : ""}`}>
       <nav className="site-nav" aria-label="Primary navigation">
         <Link className="wordmark" to="/" aria-label="TrailFinder home">
-          TrailFinder
+          <span>Trail</span>
+          <span className="text-[var(--rust)]">Finder</span>
         </Link>
 
         <div className="site-nav__links">
@@ -30,10 +31,6 @@ function Navigation() {
 
           <Link className="nav-link" to="/about">
             About
-          </Link>
-
-          <Link className="nav-link" to="/contact">
-            Contact
           </Link>
         </div>
       </nav>

@@ -511,6 +511,10 @@ a {
   border-color: var(--rust-light);
 }
 
+.about.section-shell {
+  padding-block: 6rem 4rem;
+}
+
 .filters {
   display: flex;
   gap: 1.5rem;
